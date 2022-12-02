@@ -80,6 +80,7 @@ try:
         # 2. append current working directory to the file name
         # file_path = os.path.join(file_dir,uploaded_file.name)
         file_path = f"{file_dir}{uploaded_file.name}"
+        st.write(file_path)
         # 3. take the dataframe to excel and save to file directory 
         # df_.to_excel(file_path)
         # del df_
