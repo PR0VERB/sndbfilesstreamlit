@@ -61,11 +61,11 @@ try:
             if indicator_selected != 'Make a Selection':
                 # st.write("before upload")
                 uploaded_file = st.file_uploader("Choose an xlsx or csv file")
-                if uploaded_file is not None:
-                    def chosen_sheet(uploaded_file: str):
-                        return pd.read_excel(uploaded_file,sheet_name = 'Sheet1')
-                    df_ = chosen_sheet(uploaded_file)
-                print("UPLOADED FILE ##############################", uploaded_file)
+                # if uploaded_file is not None:
+                #     def chosen_sheet(uploaded_file: str):
+                #         return pd.read_excel(uploaded_file,sheet_name = 'Sheet1')
+                #     df_ = chosen_sheet(uploaded_file)
+                # print("UPLOADED FILE ##############################", uploaded_file)
                 #assign the corresponding folder id
                 folder_id = drive_directory_df[(drive_directory_df.Metro == metro_selected) & (drive_directory_df.Indicator == indicator_selected)].FolderID.values[0]
         #TODO Columns validation 
@@ -81,8 +81,8 @@ try:
         # file_path = os.path.join(file_dir,uploaded_file.name)
         file_path = f"{file_dir}{uploaded_file.name}"
         # 3. take the dataframe to excel and save to file directory 
-        df_.to_excel(file_path)
-        del df_
+        # df_.to_excel(file_path)
+        # del df_
         
         print("Backed up file" + uploaded_file.name)
         
