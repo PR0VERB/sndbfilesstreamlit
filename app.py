@@ -22,13 +22,13 @@ from src import (
     )
 
 # hide the header and footer #
-# hide_streamlit_style = """
-#             <style>
-#             #MainMenu {visibility: hidden;}
-#             footer {visibility: hidden;}
-#             </style>
-#             """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 # hide the header and footer #
 
                                                                         ######################### 1. Import UPLOADING Libraries ####################
