@@ -59,10 +59,10 @@ if enter_email in stake_addresses: #because if email_verify_button: does not wor
     # indicator list
     indicators = list(drive_directory_df.Indicator.unique())
     indicators.insert(0,'Make a Selection')
-    st.write("before metro selected")
+    # st.write("before metro selected")
     metro_selected = st.selectbox("Select a metro", tuple(metros), key=11)
     if metro_selected != 'Make a Selection':
-        st.write("before idncatpr selected")
+        # st.write("before idncatpr selected")
         indicator_selected = st.selectbox("Select an indicator", tuple(indicators), key = 22)
         
         
